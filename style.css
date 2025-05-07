@@ -1,0 +1,174 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  
+  nav .logo {
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  nav .hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #575757;
+  }
+  
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Added justification for image positioning */
+    gap: 5px;  /* Reduced gap to 5px for large screens */
+  }
+  
+  .recommendations div {
+    width: calc(33.33% - 5px);  /* Each image occupies 1/3 of the width minus the gap */
+    max-width: 230px; /* Reduced max-width for compact layout */
+  }
+  
+  .recommendations img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    object-fit: cover;
+    max-height: 200px; /* Limiting height */
+  }
+  
+  .recommendations img:hover {
+    transform: scale(1.05);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  
+  form label {
+    margin-top: 10px;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+  
+  form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #575757;
+  }
+  
+  #formResponse {
+    margin-top: 10px;
+    color: green;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    .recommendations div {
+      width: calc(50% - 5px);  /* Reduced gap to 5px */
+    }
+  
+    nav .hamburger {
+      display: block;
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .recommendations div {
+      width: 100%;  /* Full width for mobile */
+      max-width: 200px;  /* Smaller max-width */
+    }
+  
+    .recommendations img {
+      max-width: 100%;
+      max-height: 150px;  /* Reduced height for mobile */
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+    }
+  
+    nav .logo {
+      font-size: 1.2em;
+    }
+  
+    form {
+      max-width: 100%;
+    }
+  }
+  
